@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EmojiCode</title>
-  <meta name="description" content="Supplement code keywords with emojis across 10 languages to reduce cognitive load and enhance pattern recognition. A VS Code extension by Brainbox.">
+  <title>Moji</title>
+  <meta name="description" content="Supplement code keywords with emojis across 10 languages to reduce cognitive load and enhance pattern recognition. A VS Code extension.">
   <style>
     /* ===== RESET & BASE ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -499,6 +499,28 @@
     footer .footer-links a { color: var(--text-muted); font-size: 0.85rem; }
     footer .footer-links a:hover { color: var(--text); }
 
+    /* ===== VIDEO DEMO ===== */
+    .video-section {
+      padding: 80px 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 100%, rgba(240, 192, 64, 0.05), transparent),
+        var(--bg-dark);
+    }
+    .video-wrapper {
+      margin-top: 48px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg-code);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+      transition: border-color 0.25s;
+    }
+    .video-wrapper:hover { border-color: rgba(240, 192, 64, 0.3); }
+    .video-wrapper video {
+      width: 100%;
+      display: block;
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .problem-grid { grid-template-columns: 1fr; }
@@ -529,15 +551,15 @@
   <nav>
     <div class="nav-inner">
       <a href="#" class="logo">
-        <img src="../EmojiCodePro.png" alt="EmojiCode logo">
-        EmojiCode
+        <img src="Emoticon_Smile_Face_v4.png" alt="Moji logo">
+        Moji
       </a>
       <div class="nav-links">
         <a href="#features">Features</a>
         <a href="#languages">Languages</a>
         <a href="#how-it-works">How It Works</a>
         <a href="#faq">FAQ</a>
-        <a href="https://marketplace.visualstudio.com/items?itemName=placeholder-free" class="btn-primary"  style=" color:#0d1117">Install Free</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=Lucidian.MojiCode" class="btn-primary"  style=" color:#0d1117">Install Free</a>
         <a href="https://marketplace.visualstudio.com/items?itemName=placeholder-pro" class="btn-primary" style="background: #0d1117; color: #f0c040; border: 1px solid #f0c040;">Install Pro</a>
       </div>
     </div>
@@ -551,10 +573,10 @@
         Read code with your<br><span class="highlight">whole brain.</span>
       </h1>
       <p class="animate delay-2">
-        EmojiCode adds visual cues to code keywords&mdash;reducing cognitive load, boosting pattern recognition, and making code easier to read at a glance.
+        Moji adds visual cues to code keywords&mdash;reducing cognitive load, boosting pattern recognition, and making code easier to read at a glance.
       </p>
       <div class="hero-buttons animate delay-3">
-        <a href="https://marketplace.visualstudio.com/items?itemName=placeholder-free" class="btn-primary">
+        <a href="https://marketplace.visualstudio.com/items?itemName=Lucidian.MojiCode" class="btn-primary">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M0 2.5L6.5 0 16 2.5v11L6.5 16 0 13.5v-11zm7 10.3V3.2L1.3 4.6v6.8L7 12.8zM8 3.2v9.6l6.7-1.4V4.6L8 3.2z"/></svg>
           Install Free
         </a>
@@ -567,18 +589,35 @@
     </div>
   </section>
 
+  <!-- ========== VIDEO DEMO ========== -->
+  <section class="video-section" id="video-demo">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">See It In Action</div>
+        <h2 class="section-title">Watch Moji transform your code</h2>
+        <p class="section-sub mx-auto">See how emoji overlays instantly make code easier to scan&mdash;without changing a single character in your files.</p>
+      </div>
+      <div class="video-wrapper">
+        <video controls playsinline preload="metadata">
+          <source src="Moji-Demo-Vid-Short-sm.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== DEMO ========== -->
   <section class="section" id="demo">
     <div class="container">
       <div class="text-center">
         <div class="section-label">See the Difference</div>
         <h2 class="section-title">Code that speaks to your visual cortex</h2>
-        <p class="section-sub mx-auto">Your source code stays untouched. EmojiCode overlays intuitive visual symbols next to keywords, giving your brain a second channel for meaning.</p>
+        <p class="section-sub mx-auto">Your source code stays untouched. Moji overlays intuitive visual symbols next to keywords, giving your brain a second channel for meaning.</p>
       </div>
 
       <div class="compare">
         <div>
-          <div class="compare-label before">Without EmojiCode</div>
+          <div class="compare-label before">Without Moji</div>
           <div class="code-block">
             <div class="code-block-header">
               <span class="dot dot-red"></span>
@@ -600,13 +639,13 @@
           </div>
         </div>
         <div>
-          <div class="compare-label after">With EmojiCode</div>
+          <div class="compare-label after">With Moji</div>
           <div class="code-block" style="border-color: rgba(240,192,64,0.3);">
             <div class="code-block-header">
               <span class="dot dot-red"></span>
               <span class="dot dot-yellow"></span>
               <span class="dot dot-green"></span>
-              JavaScript + EmojiCode-Pro
+              JavaScript + MojiCode-Pro
             </div>
             <pre>&#x1F680; <span class="kw">async</span> &#x26A1; <span class="kw">function</span> <span class="fn">fetchUser</span>(id) {
   &#x1F91E; <span class="kw">try</span> {
@@ -840,12 +879,12 @@
       <div class="text-center">
         <div class="section-label">How It Works</div>
         <h2 class="section-title">Three steps. Zero config.</h2>
-        <p class="section-sub mx-auto">EmojiCode uses VS Code's decoration API to render emoji overlays. Your source code is never touched.</p>
+        <p class="section-sub mx-auto">Moji uses VS Code's decoration API to render emoji overlays. Your source code is never touched.</p>
       </div>
       <div class="steps">
         <div class="step">
           <h3>Install the Extension</h3>
-          <p>Search "EmojiCode" in the VS Code marketplace and click Install. That's it.</p>
+          <p>Search "Moji" in the VS Code marketplace and click Install. That's it.</p>
         </div>
         <div class="step">
           <h3>Open a Supported File</h3>
@@ -865,7 +904,7 @@
       <blockquote>
         "Programming feels hard because written code forces your brain to operate against its natural strengths."
       </blockquote>
-      <cite>&mdash; The EmojiCode Philosophy</cite>
+      <cite>&mdash; The Moji Philosopher</cite>
     </div>
   </div>
 
@@ -877,6 +916,13 @@
         <h2 class="section-title">Common questions</h2>
       </div>
       <div class="faq-list">
+         <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            Is Moji private?
+          </div>
+          <div class="faq-a">100% Always. Forever.</div>
+        </div>
+        
         <div class="faq-item">
           <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
             Does this change my source code?
@@ -893,7 +939,7 @@
           <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
             Can collaborators see the emojis?
           </div>
-          <div class="faq-a">Only if they also have EmojiCode-Pro installed. Source files are never affected, so collaboration is seamless.</div>
+          <div class="faq-a">Only if they also have MojiCode-Pro installed. Source files are never affected, so collaboration is seamless.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
@@ -905,13 +951,13 @@
           <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
             Can I disable specific emojis?
           </div>
-          <div class="faq-a">Yes. Open the Settings panel via the <code>EmojiCode-Pro: Settings</code> command to toggle individual emojis on or off for each language.</div>
+          <div class="faq-a">Yes. Open the Settings panel via the <code>MojiCode-Pro: Settings</code> command to toggle individual emojis on or off for each language.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
             Is there scientific basis for this?
           </div>
-          <div class="faq-a">Yes. The cognitive science behind visual processing, dual coding theory, and reduced working memory load is well-established. EmojiCode-Pro applies those principles to code reading.</div>
+          <div class="faq-a">Yes. The cognitive science behind visual processing, dual coding theory, and reduced working memory load is well-established. MojiCode-Pro applies those principles to code reading.</div>
         </div>
       </div>
     </div>
@@ -923,7 +969,7 @@
       <h2>Start reading code<br>the way your brain wants to.</h2>
       <p>Free to install. Zero config. Toggle on and off anytime.</p>
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://marketplace.visualstudio.com/items?itemName=placeholder-free" class="btn-primary" style="font-size: 1rem; padding: 14px 32px;">
+        <a href="https://marketplace.visualstudio.com/items?itemName=Lucidian.MojiCode" class="btn-primary" style="font-size: 1rem; padding: 14px 32px;">
           <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M0 2.5L6.5 0 16 2.5v11L6.5 16 0 13.5v-11zm7 10.3V3.2L1.3 4.6v6.8L7 12.8zM8 3.2v9.6l6.7-1.4V4.6L8 3.2z"/></svg>
           Install Free
         </a>
